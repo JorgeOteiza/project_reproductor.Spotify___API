@@ -1,25 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
+import { SongsList } from "./SongsList";
+import { Controls } from "./Controls";
 
 //create your first component
 const Home = () => {
+
+	const [selected, setSelected] = useState([]);
+	const [songs, setSongs] = useState([]);
+
+	const goPrev = (current) => {
+		const index = songs.findIndex(song => song.name === current.name);
+		setSelected(songs[index - 1])
+	}
+	const goNext = (current) => {
+		const index = songs.findIndex(song => song.name === current.name);
+		setSelected(songs[index + 1])
+	}
+
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				comenzando a crear el reproductor estilo spotify
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+		<section>
+			<SongsList selected={selected} setSelected={setSelected} songs={songs} setSongs={setSongs} />
+			<Controls selected={selected} goPrev={goPrev} goNext={goNext} />
+		</section>
 	);
 };
 
