@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import "../../styles/Controls.css";
+import "../../styles/SongsList.css";
+
 
 //include images into your bundle
 import { SongsList } from "./SongsList";

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "../../Controls.css"
+import "../../styles/Controls.css"
 
 export const Controls = ({ selected, goPrev, goNext }) => {
     const [play, setPlay] = useState(false);
