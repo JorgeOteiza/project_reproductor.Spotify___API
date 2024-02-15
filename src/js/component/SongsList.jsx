@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./SongsList.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "../../SongsList.css"
 
 export const SongsList = ({ selected, setSelected, songs, setSongs }) => {
     useEffect(() => {
