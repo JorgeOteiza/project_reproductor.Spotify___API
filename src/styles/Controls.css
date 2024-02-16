@@ -1,9 +1,14 @@
-/* Controls.css */
 section {
-  display: flex;
+  background: rgba(0, 0, 0, 0.917);
+  display: inline-grid;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin: 93px;
+  padding: 69px;
+  max-height: 400px;
+  contain: inherit;
+  overflow: auto;
+  border-radius: 6px;
 }
 
 button {

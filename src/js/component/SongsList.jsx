@@ -6,8 +6,8 @@ export const SongsList = ({ selected, setSelected, songs, setSongs }) => {
     useEffect(() => {
         fetch("https://playground.4geeks.com/apis/fake/sound/songs")
             .then(response => response.json())
-            .then((songsLocal) => setSongs(songsLocal)
-                .catch(() => console.log("algo falló")))
+            .then((songsLocal) => setSongs(songsLocal))
+            .catch(() => console.log("algo falló"));
 
         console.log("hola")
     }, [])
