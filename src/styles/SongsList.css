@@ -1,23 +1,42 @@
+.songs-container {
+  background: rgba(0, 0, 0, 0.917);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 33px;
+  padding: 69px;
+  max-height: 400px;
+  contain: inherit;
+  overflow: auto;
+  border-radius: 6px;
+}
+
 ul {
   list-style-type: none;
-  padding: 0;
+  padding: 34px;
+  background: rgb(0 0 0 / 0%);
+  height: 399px;
+  width: 498px;
 }
 
 li {
+  padding: 6px;
   margin-bottom: 10px;
   display: flex;
+  border-bottom: 1px solid wheat;
 }
 
 button {
   padding: 10px 20px;
   font-size: 16px;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
+  border: none;
+  background-color: transparent; /* Cambiado a transparente */
 }
 
 button p {
   margin: 0;
+  color: green;
 }
 
 button:hover {

@@ -7,5 +7,26 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "cSpell.words": ["falló", "hola", "Reproductor", "siguiente"]
+  "cSpell.words": [
+    "Ajusta",
+    "Asegura",
+    "Cambiado",
+    "elementos",
+    "encima",
+    "esté",
+    "falló",
+    "fontawesome",
+    "fortawesome",
+    "hola",
+    "margen",
+    "necesario",
+    "otros",
+    "pasar",
+    "ratón",
+    "Reproductor",
+    "según",
+    "siguiente",
+    "transparencia",
+    "transparente"
+  ]
 }

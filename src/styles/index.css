@@ -1,4 +1,9 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 #app {
-  text-align: center;
   background-color: #173b17d6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

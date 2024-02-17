@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "../../styles/SongsList.css"
+import "../../styles/SongsList.css";
 
 export const SongsList = ({ selected, setSelected, songs, setSongs }) => {
     useEffect(() => {
@@ -9,17 +9,22 @@ export const SongsList = ({ selected, setSelected, songs, setSongs }) => {
             .then((songsLocal) => setSongs(songsLocal))
             .catch(() => console.log("algo falló"));
 
-        console.log("hola")
-    }, [])
+        console.log("hola");
+    }, []);
 
-    return (<>
-        {
-            songs.map((song, index) => (
-                <li key={song.name + index}>
-                    <button disabled={selected.name === song.name} onClick={() => { setSelected(song) }}><p>{song.name}</p></button>
-                </li>
-            ))
-        }
-    </>
-    )
-} 
+    return (
+        <section className="songs-container">
+            <ul>
+                {songs.map((song, index) => (
+                    <li key={song.name + index}>
+                        <button
+                            disabled={selected.name === song.name}
+                            onClick={() => { setSelected(song) }}>
+                            <p>{song.name}</p>
+                        </button>
+                    </li>
+                ))}
+            </ul>
+        </section>
+    );
+};
