@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { faBackward, faCirclePlay, faForward, faStopCircle } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import "../../styles/Controls.css";
 
 export const Controls = ({ selected, goPrev, goNext }) => {
@@ -7,10 +10,10 @@ export const Controls = ({ selected, goPrev, goNext }) => {
     return (
         <section className="controls-container">
             <button onClick={() => goPrev(selected)}>
-                <i className="fa-solid fa-backward"></i>
+                <FontAwesomeIcon icon={faBackward} size="2x" />
             </button>
             <button onClick={() => setPlay(!play)}>
-                {play ? <i className="fa-solid fa-stop"></i> : <i className="fa-solid fa-circle-play"></i>} {play ? 'Stop' : 'Play'}
+                {play ? <FontAwesomeIcon icon={faStopCircle} size="2x" /> : <FontAwesomeIcon icon={faCirclePlay} size="2x" />}
             </button>
             {play && (
                 <audio src={"https://assets.breatheco.de/apis/sound/" + selected.url} autoPlay>
@@ -18,8 +21,10 @@ export const Controls = ({ selected, goPrev, goNext }) => {
                 </audio>
             )}
             <button onClick={() => goNext(selected)}>
-                <i className="fa-solid fa-forward"></i>
+                <FontAwesomeIcon icon={faForward} size="2x" />
             </button>
         </section>
     );
+
+
 };
